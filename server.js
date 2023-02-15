@@ -14,7 +14,7 @@ const port = process.env.PORT || 4000;
 app.use(cors());
 app.use(express.json());
 app.use((req, res, next) => {
-  console.log(req.url, req.method);
+  // console.log(req.url, req.method);
   next();
 });
 
