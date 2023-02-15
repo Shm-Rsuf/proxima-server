@@ -1,4 +1,5 @@
 const express = require("express");
+const { postProject } = require("../controllers/projectController");
 
 //router
 const router = express.Router();
@@ -14,9 +15,7 @@ router.get("/:id", (req, res) => {
 });
 
 //Post a new project
-router.post("/", (req, res) => {
-  console.log(res.json({ message: "Post a new project" }));
-});
+router.post("/", postProject);
 
 //Delete a project
 router.delete("/:id", (req, res) => {
