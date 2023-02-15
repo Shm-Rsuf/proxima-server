@@ -1,7 +1,11 @@
 const Project = require("../models/projectModel");
 
 //get all projects
+const getAllProjects = async (req, res) => {
+  const projects = await Project.find({});
 
+  res.status(200).json(projects);
+};
 //get a single project
 
 //post a new project
@@ -24,4 +28,5 @@ const postProject = async (req, res) => {
 
 module.exports = {
   postProject,
+  getAllProjects,
 };

@@ -1,13 +1,14 @@
 const express = require("express");
-const { postProject } = require("../controllers/projectController");
+const {
+  postProject,
+  getAllProjects,
+} = require("../controllers/projectController");
 
 //router
 const router = express.Router();
 
 //Get all projects
-router.get("/", (req, res) => {
-  console.log(res.json({ message: "Get all projects" }));
-});
+router.get("/", getAllProjects);
 
 //Get a single projects
 router.get("/:id", (req, res) => {
